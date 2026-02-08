@@ -24,6 +24,8 @@
                 <li><a href="#blog">LOCALIDADES</a></li>
                 <li><a href="#contacto">CONTACTO</a></li>
                 <li><a href="#agenda">AGENDA</a></li>
+                <li><a href="#login">INICIAR SESIÓN</a></li>
+
             </ul>
         </div>
 
@@ -177,6 +179,28 @@
 
 <script src="app.js"></script>
 
+
+ 
+<!--apartado de log in -->
+<section class="course" id="login">
+    <h1>Iniciar Sesión</h1>
+    <p>Accede para gestionar tu agenda Mercedes-Benz</p>
+
+    <div class="row" style="justify-content: center;">
+        <div class="contact-col">
+            <input type="email" id="email" placeholder="Correo">
+            <input type="password" id="password" placeholder="Contraseña">
+
+            <button type="button" onclick="login()">Iniciar sesión</button>
+            <button type="button" onclick="register()">Registrarse</button>
+
+            <p id="loginMsg" style="margin-top:15px; color:white;"></p>
+        </div>
+    </div>
+</section>
+
+
+
  
 <!--apartado de redes sociales con links-->
 <section class="footer">
@@ -210,6 +234,7 @@
         navLinks.style.right = "-200px";
     }
 </script>
+
 
 </body>
 </html>
