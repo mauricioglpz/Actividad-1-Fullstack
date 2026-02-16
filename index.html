@@ -145,7 +145,6 @@
             <div class="contact-col">
                 <form action="">
                     <input type="text" name="nombre" placeholder="Introduce tu nombre completo" required>
-                    <input type="email" name="email" placeholder="Introduce tu correo electrónico" required>
                     <textarea rows="8" name="mensaje" placeholder="Escribe tu mensaje aquí..." required></textarea>
                     <button type="submit" class="hero-btn red-btn">Enviar Mensaje</button>
                 </form>
@@ -159,7 +158,6 @@
 </section>
 
 
-<!--apartado de agendas-->
 <section class="course" id="agenda">
     <h1>Planifica tu Experiencia Mercedes</h1>
     <em>Organiza tus pruebas de manejo y visitas a nuestras localidades.</em>
@@ -168,23 +166,21 @@
         <div class="contact-col">
             <div class="task-input-container">
                 <input type="text" id="taskInput" placeholder="Ej: Agendar prueba de manejo Clase G...">
-                <button id="addTaskBtn" class="hero-btn red-btn" style="color: black !important; border-color: black;">Agregar Tarea</button>
+                <button id="addTaskBtn" class="hero-btn red-btn" 
+                        style="color: black !important; border-color: black;">
+                    Agregar Tarea
+                </button>
             </div>
             
-            <ul id="taskList" style="list-style: none; margin-top: 30px; padding: 0;">
-                </ul>
+            <ul id="taskList" style="list-style: none; margin-top: 30px; padding: 0;"></ul>
         </div>
     </div>
 </section>
 
-<script src="app.js"></script>
-
-
  
-<!--apartado de log in -->
+<!-- LOGIN -->
 <section class="course" id="login">
     <h1>Iniciar Sesión</h1>
-    <p>Accede para gestionar tu agenda Mercedes-Benz</p>
 
     <div class="row" style="justify-content: center;">
         <div class="contact-col">
@@ -193,8 +189,30 @@
 
             <button type="button" onclick="login()">Iniciar sesión</button>
             <button type="button" onclick="register()">Registrarse</button>
+            <button type="button" onclick="logout()">Cerrar sesión</button>
 
             <p id="loginMsg" style="margin-top:15px; color:white;"></p>
+        </div>
+    </div>
+</section>
+
+
+<!--  PRODUCTOS (CRUD REAL) -->
+<section class="course" id="productos">
+    <h1>Gestión de Productos </h1>
+
+    <div class="row" style="justify-content: center;"> 
+        <div class="contact-col">
+            <input type="text" id="nombreProducto" placeholder="Nombre del modelo (Ej: Clase A)">
+            <input type="number" id="precioProducto" placeholder="Precio (Ej: 850000)">
+
+            <button type="button" class="hero-btn" 
+                    style="color: white; background: #000; border: 1px solid #fff;" 
+                    onclick="crearProducto()">
+                Agregar Producto
+            </button>
+
+            <ul id="productosList" style="list-style: none; margin-top: 20px; text-align: left;"></ul>
         </div>
     </div>
 </section>
@@ -223,6 +241,7 @@
 </section>
 
 
+<script src="app.js"></script>}
 <script>
     var navLinks = document.getElementById("navLinks");
 
